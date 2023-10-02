@@ -1,10 +1,13 @@
+name: Percy batch tests
+
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches: [main, master]
 
 jobs:
-  name: percy_batch_check
   build:
     runs-on: ubuntu-latest
 
