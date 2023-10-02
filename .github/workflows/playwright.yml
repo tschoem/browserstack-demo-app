@@ -29,10 +29,10 @@ jobs:
         with:
           node-version: 18
       - name: Sleep for 2 minutes
-        run: sleep 120s
+        run: sleep 90s
         shell: bash
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --include=dev
         working-directory: tests
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
