@@ -1,4 +1,4 @@
-name: Percy batch visual tests
+name: Percy batch tests
 
 on:
   push:
