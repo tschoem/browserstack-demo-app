@@ -1,0 +1,10 @@
+base-url: https://bstackdemo.com
+
+snapshots:
+  - url: /
+    name: "homepage"
+    percyCSS: "footer { display: none; }"
+  - url: /signin
+    name: "/signin - Sign in page"
+  - url: /swagger
+    name: "/swagger - API testing"
