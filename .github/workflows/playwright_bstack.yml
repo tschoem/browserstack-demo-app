@@ -20,7 +20,7 @@ jobs:
       - name: Deploy site
         run: yarn dev
   test:
-    needs: build
+    needs: deployment
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
