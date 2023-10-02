@@ -6,19 +6,19 @@ on:
   pull_request:
     branches: [main, master]
 jobs:
-  deployment:
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    environment: staging
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 12
-      - name: Install dependencies
-        run: yarn install
-      - name: Deploy site
-        run: yarn dev
+  #  deployment:
+  #    timeout-minutes: 60
+  #    runs-on: ubuntu-latest
+  #    environment: staging
+  #    steps:
+  #      - uses: actions/checkout@v3
+  #      - uses: actions/setup-node@v3
+  #        with:
+  #          node-version: 12
+  #      - name: Install dependencies
+  #        run: yarn install
+  #      - name: Deploy site
+  #        run: yarn dev
   test:
     environment: staging
     timeout-minutes: 60
@@ -28,11 +28,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Sleep for 2 minutes
-        run: sleep 120s
-        shell: bash
+      #      - name: Sleep for 2 minutes
+      #        run: sleep 120s
+      #        shell: bash
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --include=dev
         working-directory: tests
       - name: Run Playwright tests on Bstack
         run: npx browserstack-node-sdk playwright test
