@@ -1,3 +1,5 @@
+name: Percy batch visual tests
+
 on:
   push:
     branches:
