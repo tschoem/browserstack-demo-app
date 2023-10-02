@@ -6,7 +6,6 @@ on:
       - main
 
 jobs:
-  name: percy_batch_check
   build:
     runs-on: ubuntu-latest
 
