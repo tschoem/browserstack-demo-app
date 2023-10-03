@@ -82,7 +82,7 @@ const Product = props => {
         </div>
         {productInstallment}
       </div>
-      <div onClick={clickHandler} className="shelf-item__buy-btn">Add to cart</div>
+      <div onClick={clickHandler} className="shelf-item__buy-btn">Buy</div>
     </div>
   );
 };

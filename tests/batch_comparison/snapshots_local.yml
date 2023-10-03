@@ -7,5 +7,7 @@ snapshots:
     waitForTimeout: 2000
   - url: /signin
     name: "/signin - Sign in page"
+    waitForTimeout: 2000
   - url: /swagger
     name: "/swagger - API testing"
+    waitForTimeout: 2000
