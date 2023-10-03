@@ -40,7 +40,7 @@ jobs:
       #    username: ${{ secrets.BROWSERSTACK_USERNAME }}
       #    access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
       - name: Run Playwright tests on Bstack
-        run: npx browserstack-node-sdk playwright test
+        run: npx percy exec -- browserstack-node-sdk playwright test
         working-directory: tests
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
