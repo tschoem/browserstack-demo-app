@@ -12,6 +12,6 @@
     "scripts": {
         "postinstall": "npm update browserstack-node-sdk",
         "bstack": "npx percy exec -- browserstack-node-sdk playwright test",
-        "local": "npx playwright test"
+        "local": "npx percy exec -- playwright test"
     }
 }

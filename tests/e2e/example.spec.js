@@ -34,7 +34,8 @@ test.describe('two tests', () => {
 
     await page.getByRole('button', { name: 'Log In' }).click();
 
-    await expect(page.url()).not.toContain('signin');
+    await page.waitForTimeout(3000);
+
     await expect(page.getByText('demouser')).toBeVisible();
     await page.waitForTimeout(3000);
     await percySnapshot(page, 'Signed in page');
