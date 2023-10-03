@@ -4,6 +4,7 @@ snapshots:
   - url: /
     name: "homepage"
     percyCSS: "footer { display: none; }"
+    waitForTimeout: 2000
   - url: /signin
     name: "/signin - Sign in page"
   - url: /swagger
