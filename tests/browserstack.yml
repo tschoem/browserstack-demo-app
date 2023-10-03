@@ -31,10 +31,12 @@ platforms:
     osVersion: Big Sur
     browserName: chrome
     browserVersion: latest
+    local: true
   - os: Windows
     osVersion: 11
     browserName: chrome
     browserVersion: latest
+    local: true
 
 # =======================
 # Parallels per Platform
@@ -53,9 +55,9 @@ parallelsPerPlatform: 1
 # ==========================================
 # Set browserStackLocal to true if your website under test is not accessible publicly over the internet
 # Learn more about how BrowserStack Local works here -> https://www.browserstack.com/docs/automate/selenium/local-testing-introduction
-browserstackLocal: true
-browserStackLocalOptions:
-  localIdentifier: nativeapp:E2962855-C6AC-519D-A3F3-DA9B5072A8D7
+# browserstackLocal: true
+# browserStackLocalOptions:
+#  localIdentifier: nativeapp:E2962855-C6AC-519D-A3F3-DA9B5072A8D7
 # Options to be passed to BrowserStack local in-case of advanced configurations
 # localIdentifier: # <string> (Default: null) Needed if you need to run multiple instances of local.
 # forceLocal: true  # <boolean> (Default: false) Set to true if you need to resolve all your traffic via BrowserStack Local tunnel.
