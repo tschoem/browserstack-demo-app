@@ -42,6 +42,8 @@ jobs:
       - name: Run Playwright tests on Bstack
         run: npx browserstack-node-sdk playwright test
         working-directory: tests
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
       - uses: actions/upload-artifact@v3
         if: always()
         with:
