@@ -15,6 +15,7 @@ test.describe('two tests', () => {
 
     // Expect a title "to contain" a substring.
     await expect(page).toHaveTitle(/StackDemo/);
+    await page.waitForTimeout(3000);
     await percySnapshot(page, 'Homepage');
 
   });
@@ -33,9 +34,10 @@ test.describe('two tests', () => {
 
     await page.getByRole('button', { name: 'Log In' }).click();
 
+    await expect(page.url()).not.toContain('signin');
     await expect(page.getByText('demouser')).toBeVisible();
+    await page.waitForTimeout(3000);
     await percySnapshot(page, 'Signed in page');
-
 
   });
 
