@@ -11,7 +11,7 @@ accessKey: 3M9sxo5mZneGYXa4pvUt
 # ======================
 # The following capabilities are used to set up reporting on BrowserStack:
 # Set 'projectName' to the name of your project. Example, Marketing Website
-projectName: BStackdemo fork 2023
+projectName: BStackdemo SE Version
 # Set `buildName` as the name of the job / testsuite being run
 buildName: bstackdemo e2e playwright
 # `buildIdentifier` is a unique id to differentiate every execution that gets appended to
