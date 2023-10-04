@@ -4,13 +4,14 @@
     "private": true,
     "devDependencies": {
         "@percy/cli": "^1.27.2",
+        "@percy/playwright": "^1.0.4",
         "@playwright/test": "^1.35.0",
         "@types/node": "^20.8.0",
         "browserstack-node-sdk": "^1.27.3"
     },
     "scripts": {
         "postinstall": "npm update browserstack-node-sdk",
-        "bstack": "npx browserstack-node-sdk playwright test",
-        "local": "npx playwright test"
+        "bstack": "npx percy exec -- browserstack-node-sdk playwright test",
+        "local": "npx percy exec -- playwright test"
     }
 }

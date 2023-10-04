@@ -3,7 +3,8 @@ base-url: https://bstackdemo.com
 snapshots:
   - url: /
     name: "homepage"
-    percyCSS: "footer { display: none; }"
+    #percyCSS: "footer { display: none; }"
+    #waitForTimeout: 1000
   - url: /signin
     name: "/signin - Sign in page"
   - url: /swagger

@@ -1,11 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
-
-
-/*test.beforeAll(async ({ page }) => {
-  //console.log(`Running ${testInfo.title}`);
-  await page.goto('http://127.0.0.1:3000');
-});*/
+const percySnapshot = require('@percy/playwright');
 
 test.describe('two tests', () => {
 
@@ -14,6 +9,9 @@ test.describe('two tests', () => {
 
     // Expect a title "to contain" a substring.
     await expect(page).toHaveTitle(/StackDemo/);
+    await page.waitForTimeout(3000);
+    await percySnapshot(page, 'Homepage');
+
   });
 
   test('signin link functions', async ({ page }) => {
@@ -30,7 +28,11 @@ test.describe('two tests', () => {
 
     await page.getByRole('button', { name: 'Log In' }).click();
 
+    await page.waitForTimeout(3000);
+
     await expect(page.getByText('demouser')).toBeVisible();
+    await page.waitForTimeout(3000);
+    await percySnapshot(page, 'Signed in page');
 
   });
 

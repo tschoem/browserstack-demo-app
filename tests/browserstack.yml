@@ -3,8 +3,9 @@
 # =============================
 # Add your BrowserStack userName and accessKey here or set BROWSERSTACK_USERNAME and
 # BROWSERSTACK_ACCESS_KEY as env variables
-userName: thomasschoemaeck_5hFvZO
-accessKey: 3M9sxo5mZneGYXa4pvUt
+userName: ${BROWSERSTACK_USERNAME}
+accessKey: ${BROWSERSTACK_ACCESS_KEY}
+framework: playwright
 
 # ======================
 # BrowserStack Reporting
@@ -39,6 +40,12 @@ platforms:
     browserVersion: latest
     local: true
     localIdentifier: nativeapp:E2962855-C6AC-519D-A3F3-DA9B5072A8D7
+  - os: Windows
+    osVersion: 11
+    browserName: edge
+    browserVersion: latest
+    local: true
+    localIdentifier: nativeapp:E2962855-C6AC-519D-A3F3-DA9B5072A8D7
 
 # =======================
 # Parallels per Platform
@@ -49,7 +56,7 @@ platforms:
 # Example 1 - If you have configured 3 platforms and set `parallelsPerPlatform` as 2, a total of 6 (2 * 3) parallel threads will be used on BrowserStack
 #
 # Example 2 - If you have configured 1 platform and set `parallelsPerPlatform` as 5, a total of 5 (1 * 5) parallel threads will be used on BrowserStack
-parallelsPerPlatform: 1
+parallelsPerPlatform: 2
 
 # ==========================================
 # BrowserStack Local
@@ -78,4 +85,4 @@ consoleLogs: errors # <string> Remote browser's console debug levels to be print
 # Test Observability is an intelligent test reporting & debugging product. It collects data using the SDK. Read more about what data is collected at https://www.browserstack.com/docs/test-observability/references/terms-and-conditions
 # Visit observability.browserstack.com to see your test reports and insights. To disable test observability, specify `testObservability: false` in the key below.
 testObservability: true
-accessibility: true
+accessibility: false
