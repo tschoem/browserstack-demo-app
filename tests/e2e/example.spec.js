@@ -2,12 +2,6 @@
 const { test, expect } = require('@playwright/test');
 const percySnapshot = require('@percy/playwright');
 
-
-/*test.beforeAll(async ({ page }) => {
-  //console.log(`Running ${testInfo.title}`);
-  await page.goto('http://127.0.0.1:3000');
-});*/
-
 test.describe('two tests', () => {
 
   test('homepage has expected title', async ({ page }) => {
