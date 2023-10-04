@@ -37,3 +37,4 @@ yarn-error.log*
 
 *.log
 tests/playwright-browserstack-sdk.config.js
+/tests/percy-debug
